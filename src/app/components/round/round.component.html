@@ -1,0 +1,100 @@
+<div class="container">
+  <ion-row size="12" class="-mt-16">
+    <ion-col size="4" sizeLg="4" class="">
+      <div class="border-2 bg-white border-red-200 rounded">
+        <div class="textfile -mt-4">
+          <span class="textlebel bg-red-500 rounded-sm text-xs text-white">
+            Level 1
+          </span>
+        </div>
+        <div class="progress-wrapper">
+          <div class="current" [ngStyle]="getOverlayStyle()">
+            {{ current1 }}/{{ max1 }}
+          </div>
+          <round-progress
+            [current]="current1"
+            [max]="max1"
+            [color]="gradient ? 'url(#gradient)' : color1"
+            [background]="background1"
+            [radius]="radius"
+            [stroke]="stroke"
+            [semicircle]="semicircle"
+            [rounded]="rounded"
+            [clockwise]="clockwise"
+            [responsive]="responsive"
+            [duration]="duration"
+            [animation]="animation"
+            [animationDelay]="animationDelay"
+          />
+        </div>
+        <span class="text-xs text-black"> 20% closed </span>
+      </div>
+    </ion-col>
+
+    <ion-col size="4" sizeLg="4">
+      <div class="border-2 bg-white border-orange-200 rounded">
+        <div class="textfile -mt-4">
+          <span class="textlebel bg-orange-500 rounded-sm text-xs text-white">
+            Level 2
+          </span>
+        </div>
+
+        <div class="progress-wrapper">
+          <div class="text-2xl current" [ngStyle]="getOverlayStyle()">
+            {{ current2 }}/{{ max2 }}
+          </div>
+          <round-progress
+            [current]="current2"
+            [max]="max2"
+            [color]="gradient ? 'url(#gradient)' : color2"
+            [background]="background2"
+            [radius]="radius"
+            [stroke]="stroke"
+            [semicircle]="semicircle"
+            [rounded]="rounded"
+            [clockwise]="clockwise"
+            [responsive]="responsive"
+            [duration]="duration"
+            [animation]="animation"
+            [animationDelay]="animationDelay"
+          />
+        </div>
+        <span class="text-xs text-black"> 47% closed </span>
+      </div>
+    </ion-col>
+
+    <ion-col size="4" sizeLg="4">
+      <div class="border-2 bg-white border-yellow-200 rounded">
+        <div class="textfile -mt-4">
+          <span class="textlebel bg-yellow-400 rounded-sm text-xs text-white">
+            Level 3
+          </span>
+        </div>
+
+        <div class="progress-wrapper">
+          <div class="current" [ngStyle]="getOverlayStyle()">
+            {{ current3 }}/{{ max3 }}
+          </div>
+          <round-progress
+            [current]="current3"
+            [max]="max3"
+            [color]="gradient ? 'url(#gradient)' : color3"
+            [background]="background3"
+            [radius]="radius"
+            [stroke]="stroke"
+            [semicircle]="semicircle"
+            [rounded]="rounded"
+            [clockwise]="clockwise"
+            [responsive]="responsive"
+            [duration]="duration"
+            [animation]="animation"
+            [animationDelay]="animationDelay"
+          />
+        </div>
+        <span class="text-xs text-black"> 33% closed </span>
+      </div>
+    </ion-col>
+  </ion-row>
+</div>
+
+

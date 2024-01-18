@@ -13,3 +13,18 @@
     background-color: #0073824D;
 }
 
+ion-button[shape=circle] {
+    color: white;
+    --border-radius: 50%;
+    --background: #007382;
+    width: 30px;
+    height: 30px;
+}
+ion-button[shape=circle1] {
+    color: white;
+    --border-radius: 50%;
+    --background: #0073824D;
+    width: 30px;
+    height: 30px;
+}
+

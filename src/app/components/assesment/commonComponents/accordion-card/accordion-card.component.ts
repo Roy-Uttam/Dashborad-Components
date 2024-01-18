@@ -21,6 +21,8 @@ export class AccordionCardComponent  implements OnInit {
     addIcons({pencil,trash})
    }
 
+   assetName="Asset Name";
+
   ngOnInit() {}
 
 }

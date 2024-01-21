@@ -16,8 +16,6 @@ export class AccordoionComponent implements OnInit {
 
   constructor() {}
 
-  current1 = 45;
-
   ngOnInit(): void {
     console.log(this.cardTitle);
   }

@@ -22,5 +22,6 @@ export class AccordionCardComponent implements OnInit {
 
   textClass = 'text-white';
   assetName = 'Asset Name';
-  ngOnInit() {}
+  ngOnInit() {
+  }
 }

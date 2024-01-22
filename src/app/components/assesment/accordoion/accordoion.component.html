@@ -1,18 +1,16 @@
 <ion-card-content class="p-4">
   <ion-accordion-group>
     <ion-accordion value="first">
-      <ion-item class="border rounded" color="accordion" slot="header">
+      <ion-item color="accordion" slot="header">
         <ion-img
           class="w-6 mr-2"
           src="../../../../../assets/icon/edit.svg"
           alt=""
         ></ion-img>
-        <!-- <ion-label class="font-bold" *ngFor="let items of cardTitle"
-          >{{ items }} (4 assets)</ion-label
-        > -->
+        <ion-label class="font-bold">{{ cardTitle }} (4 assets)</ion-label>
       </ion-item>
       <div
-        class="border-x-2 border-b-2 rounded-b-lg borderColor md:grid md:grid-cols-2 md:gap-2"
+        class="border-x-2 p-2 border-b-2 rounded-b-lg borderColor sm:grid md:grid md:grid-cols-2 sm:grid-cols-2 md:gap-4 sm:gap-4"
         slot="content"
       >
         <app-accordion-card

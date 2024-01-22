@@ -12,7 +12,7 @@ import { AccordionCardComponent } from '../commonComponents/accordion-card/accor
   imports: [IonicModule, CommonModule, FormsModule, AccordionCardComponent],
 })
 export class AccordoionComponent implements OnInit {
-  @Input() cardTitle: any[] = [];
+  @Input() cardTitle: string = '';
   @Input() dataArray: any[] = [];
 
   constructor() {}

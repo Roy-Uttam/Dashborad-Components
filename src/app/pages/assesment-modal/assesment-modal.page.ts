@@ -15,26 +15,12 @@ export class AssesmentModalPage implements OnInit {
   // myArray: string[] = ['Item 1', 'Item 2', 'Item 3', 'Item 4'];
 
   Assets: any[] = [
-    {
-      AssetNameSilo: [
-        { assetName: 'Silo 1', status: 'asset pending' },
-        { assetName: 'Silo 2', status: 'asset pending 2' },
-      ],
-    },
+    
+    {assetName: 'Silo 1', status: 'asset pending' },
+    {assetName: 'Silo 1', status: 'asset pending' },
+    {assetName: 'Silo 1', status: 'asset pending' },
 
-    {
-      AssetNameHopper: [
-        { name: 'Hopper 1', status: 'asset pending' },
-        { name: 'Hopper 2', status: 'asset pending 2' },
-      ],
-    },
-
-    {
-      AssetNameBin: [
-        { name: 'Bin 1',status: 'asset pending' },
-        { name: 'Bin 2', status: 'asset pending 2' },
-      ],
-    },
+     
   ];
 
   constructor() {}

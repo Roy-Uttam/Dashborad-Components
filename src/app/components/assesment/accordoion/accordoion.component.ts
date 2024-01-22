@@ -12,27 +12,16 @@ import { AccordionCardComponent } from '../commonComponents/accordion-card/accor
   imports: [IonicModule, CommonModule, FormsModule, AccordionCardComponent],
 })
 export class AccordoionComponent implements OnInit {
-  @Input() cardTitle: string = '';
-  @Input() dataArray: any[] = [];
+  @Input() item: any[] = [];
+  @Input() valueLength: any[] = [];
 
   constructor() {}
 
   ngOnInit(): void {
 
 
-    // for (const item of this.cardTitle) {
-    //   console.log('Our Data : ' + item);
-    // }
-
-    // console.log(this.cardTitle);
-
-    // this.cardTitle.forEach((e)=>{
-
-    //   console.log(e);
-    // })
-    // this.cardTitle.forEach((item) => {
-    //   console.log(item);
-    // });
-    // console.log(this.cardTitle);
+    console.log(this.item);
+    
+    
   }
 }

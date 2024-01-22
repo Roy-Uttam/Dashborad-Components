@@ -1,19 +1,19 @@
 <ion-grid>
-  <ion-row class="Color border rounded">
+  <ion-row class="Color border rounded" *ngFor="let item of assetItem">
     <ion-col size="3"
       ><div class="">
-        <div class="md:text-[12px] sm:text-[10px] text-[10px]">{{ assetName }}</div>
-        <div class="md:text-[12px] sm:text-[10px] font-bold text-[10px]">{{ Type_name }}</div>
-      </div></ion-col
-    >
+        <div class="md:text-[12px] text-[10px]"></div>
+        <div class="md:text-[12px] font-bold text-[10px]"></div></div
+    ></ion-col>
+
     <ion-col size="6">
       <div class="">
-        <div class="md:text-[12px] sm:text-[10px] text-[10px]">status</div>
+        <div class="md:text-[12px] text-[10px]"></div>
         <div class="inline-flex">
           <div
-            class="md:text-[10px] sm:text-[8px] text-[8px] p-[4px] border {{
-              textClass
-            }} {{ AssetBgColor }} rounded"
+            class="md:text-[10px]  text-[8px] p-[4px] border {{ textClass }} {{
+              AssetBgColor
+            }} rounded"
           >
             {{ AssetStatus }}
           </div>

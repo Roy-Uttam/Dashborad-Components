@@ -7,32 +7,18 @@
           src="../../../../../assets/icon/edit.svg"
           alt=""
         ></ion-img>
-        <ion-label class="font-bold">{{ cardTitle }} (4 assets)</ion-label>
+        <ion-label class="font-bold">{{item}}({{valueLength }} assets)</ion-label>
       </ion-item>
       <div
-        class="border-x-2 p-2 border-b-2 rounded-b-lg borderColor sm:grid md:grid md:grid-cols-2 sm:grid-cols-2 md:gap-4 sm:gap-4"
+        class="border-x-2 p-2 border-b-2 rounded-b-lg borderColor sm:grid md:grid md:grid-cols-2 md:gap-4 sm:gap-4"
         slot="content"
       >
+        
         <app-accordion-card
-          Type_name="Silo 1"
-          AssetBgColor="bg-yellow-400"
-          AssetStatus="Asset Status Pending"
+          
         ></app-accordion-card>
-        <app-accordion-card
-          Type_name="Silo 2"
-          AssetBgColor="bg-red-500"
-          AssetStatus="Asset Rejected by Approver"
-        ></app-accordion-card>
-        <app-accordion-card
-          Type_name="Silo 3"
-          AssetBgColor="bg-orange-400"
-          AssetStatus="Asset Registration Pending"
-        ></app-accordion-card>
-        <app-accordion-card
-          Type_name="Silo 4"
-          AssetBgColor="bg-green-600"
-          AssetStatus="Asset Approved"
-        ></app-accordion-card>
+       
+       
       </div>
     </ion-accordion>
   </ion-accordion-group>

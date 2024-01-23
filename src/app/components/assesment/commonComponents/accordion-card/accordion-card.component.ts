@@ -13,11 +13,9 @@ import { pencil, trash } from 'ionicons/icons';
 })
 export class AccordionCardComponent implements OnInit {
   // @Input() assetItem: string = '';
+
   @Input() AssetStatus: string = '';
-  @Input() AssetBgColor: string = '';
-
-  @Input() assetItem: any[] = [];
-
+  @Input() assetitem: any;
 
   constructor() {
     addIcons({ pencil, trash });
@@ -25,9 +23,5 @@ export class AccordionCardComponent implements OnInit {
 
   textClass = 'text-white';
   assetName = 'Asset Name';
-  ngOnInit() {
-
-
-    // console.log(this.assetItem);
-  }
+  ngOnInit() {}
 }

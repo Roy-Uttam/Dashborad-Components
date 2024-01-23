@@ -12,12 +12,11 @@
             <ion-card-title>Assets</ion-card-title>
           </ion-card-header>
           <app-accordoion
+            [item]="item"
+            [AssetTypes]="item.AssetTypes"
             *ngFor="let item of AssetTypesData"
-            [item]="item.AssetTypes"
             [valueLength]="item.values.length"
           ></app-accordoion>
-          <!-- <app-accordoion cardTitle="Hopper"></app-accordoion>
-          <app-accordoion cardTitle="Bin"></app-accordoion> -->
         </ion-card>
       </ion-col>
     </ion-row>

@@ -17,65 +17,62 @@ export class AssesmentModalPage implements OnInit {
 
   assets = [
     {
-      AssetType: 'Hopper',
-      AssetName: 'Hopper',
-      status: 'asset pending',
-    },
-
-    {
-      AssetType: 'Hopper',
-      AssetName: 'Hopper',
-      status: 'asset pending',
-    },
-    {
       AssetType: 'silo',
       AssetName: 'silo 1',
-      status: 'asset pending',
+      status: 'Asset Approval Pending',
     },
     {
       AssetType: 'silo',
       AssetName: 'silo 2',
-      status: 'asset pending',
+      status: 'Asset Rejected By Approver',
     },
+
+    {
+      AssetType: 'Hopper',
+      AssetName: 'Hopper 4',
+      status: 'Asset Approval Pending',
+    },
+
+    {
+      AssetType: 'Hopper',
+      AssetName: 'Hopper 1',
+      status: 'Asset Rejected By Approver',
+    },
+
     {
       AssetType: 'bin',
       AssetName: 'bin 3',
-      status: 'asset pending',
+      status: 'Asset Registeration Pending',
     },
     {
       AssetType: 'bin',
       AssetName: 'bin 4',
-      status: 'asset pending',
+      status: 'Asset Approved',
     },
     {
       AssetType: 'silo',
       AssetName: 'silo 3',
-      status: 'asset pending',
+      status: 'Asset Registeration Pending',
     },
     {
       AssetType: 'silo',
       AssetName: 'silo 4',
-      status: 'asset pending',
+      status: 'Asset Approved',
     },
     {
       AssetType: 'Hopper',
-      AssetName: 'Hopper',
-      status: 'asset pending',
+      AssetName: 'Hopper 2',
+      status: 'Asset Approved',
     },
     {
       AssetType: 'Hopper',
-      AssetName: 'Hopper',
-      status: 'asset pending',
+      AssetName: 'Hopper 3',
+      status: 'Asset Registeration Pending',
     },
     {
       AssetType: 'bin',
       AssetName: 'bin 1',
-      status: 'asset pending',
-    },
-    {
-      AssetType: 'silo',
-      AssetName: 'silo 5',
-      status: 'asset pending',
+      status: 'Asset Rejected By Approver',
     },
   ];
 
@@ -92,7 +89,5 @@ export class AssesmentModalPage implements OnInit {
         values: this.assets.filter((i) => i.AssetType === newItem),
       })
     );
-
-    console.log(this.AssetTypesData);
   }
 }

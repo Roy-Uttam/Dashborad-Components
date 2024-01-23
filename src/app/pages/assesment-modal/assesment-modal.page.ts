@@ -12,34 +12,80 @@ import { AccordoionComponent } from 'src/app/components/assesment/accordoion/acc
   imports: [IonicModule, CommonModule, FormsModule, AccordoionComponent],
 })
 export class AssesmentModalPage implements OnInit {
-  // myArray: string[] = ['Item 1', 'Item 2', 'Item 3', 'Item 4'];
+  AssetTypesData: any[] = [];
+  groupedAssets: any[] = [];
 
-  Assets: any[] = [
+  assets = [
     {
-      AssetNameSilo: [
-        { assetName: 'Silo 1', status: 'asset pending' },
-        { assetName: 'Silo 2', status: 'asset pending 2' },
-      ],
+      AssetType: 'silo',
+      AssetName: 'silo 1',
+      status: 'Asset Approval Pending',
+    },
+    {
+      AssetType: 'bin',
+      AssetName: 'bin 1',
+      status: 'Asset Rejected By Approver',
+    },
+    {
+      AssetType: 'silo',
+      AssetName: 'silo 2',
+      status: 'Asset Rejected By Approver',
+    },
+    {
+      AssetType: 'Hopper',
+      AssetName: 'Hopper 1',
+      status: 'Asset Rejected By Approver',
     },
 
     {
-      AssetNameHopper: [
-        { name: 'Hopper 1', status: 'asset pending' },
-        { name: 'Hopper 2', status: 'asset pending 2' },
-      ],
+      AssetType: 'bin',
+      AssetName: 'bin 3',
+      status: 'Asset Registeration Pending',
     },
-
     {
-      AssetNameBin: [
-        { name: 'Bin 1',status: 'asset pending' },
-        { name: 'Bin 2', status: 'asset pending 2' },
-      ],
+      AssetType: 'bin',
+      AssetName: 'bin 4',
+      status: 'Asset Approved',
+    },
+    {
+      AssetType: 'silo',
+      AssetName: 'silo 3',
+      status: 'Asset Registeration Pending',
+    },
+    {
+      AssetType: 'silo',
+      AssetName: 'silo 4',
+      status: 'Asset Approved',
+    },
+    {
+      AssetType: 'Hopper',
+      AssetName: 'Hopper 2',
+      status: 'Asset Approved',
+    },
+    {
+      AssetType: 'Hopper',
+      AssetName: 'Hopper 3',
+      status: 'Asset Registeration Pending',
+    },
+    {
+      AssetType: 'Hopper',
+      AssetName: 'Hopper 4',
+      status: 'Asset Approval Pending',
     },
   ];
 
   constructor() {}
 
   ngOnInit() {
-    console.log(this.Assets);
+    const assetTypeGroups = new Set(this.assets.map((item) => item.AssetType));
+
+    this.AssetTypesData = [];
+
+    assetTypeGroups.forEach((newItem) =>
+      this.AssetTypesData.push({
+        AssetTypes: newItem,
+        values: this.assets.filter((i) => i.AssetType === newItem),
+      })
+    );
   }
 }

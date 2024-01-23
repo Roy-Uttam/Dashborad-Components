@@ -1,40 +1,23 @@
 <ion-card-content class="p-4">
   <ion-accordion-group>
     <ion-accordion value="first">
-      <ion-item class="border rounded" color="accordion" slot="header">
+      <ion-item color="accordion" slot="header">
         <ion-img
           class="w-6 mr-2"
           src="../../../../../assets/icon/edit.svg"
           alt=""
         ></ion-img>
-        <!-- <ion-label class="font-bold" *ngFor="let items of cardTitle"
-          >{{ items }} (4 assets)</ion-label
-        > -->
+        <ion-label class="font-bold"
+          >{{ AssetTypes }}({{ valueLength }} assets)</ion-label
+        >
       </ion-item>
       <div
-        class="border-x-2 border-b-2 rounded-b-lg borderColor md:grid md:grid-cols-2 md:gap-2"
+        class="border-x-2 p-2 border-b-2 rounded-b-lg borderColor sm:grid md:grid md:grid-cols-2 md:gap-2 sm:gap-2"
         slot="content"
       >
-        <app-accordion-card
-          Type_name="Silo 1"
-          AssetBgColor="bg-yellow-400"
-          AssetStatus="Asset Status Pending"
-        ></app-accordion-card>
-        <app-accordion-card
-          Type_name="Silo 2"
-          AssetBgColor="bg-red-500"
-          AssetStatus="Asset Rejected by Approver"
-        ></app-accordion-card>
-        <app-accordion-card
-          Type_name="Silo 3"
-          AssetBgColor="bg-orange-400"
-          AssetStatus="Asset Registration Pending"
-        ></app-accordion-card>
-        <app-accordion-card
-          Type_name="Silo 4"
-          AssetBgColor="bg-green-600"
-          AssetStatus="Asset Approved"
-        ></app-accordion-card>
+        @for(asset of assetValues; track asset){
+        <app-accordion-card [assetitem]="asset"></app-accordion-card>
+        }
       </div>
     </ion-accordion>
   </ion-accordion-group>

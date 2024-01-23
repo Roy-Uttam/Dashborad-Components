@@ -12,27 +12,34 @@ import { AccordionCardComponent } from '../commonComponents/accordion-card/accor
   imports: [IonicModule, CommonModule, FormsModule, AccordionCardComponent],
 })
 export class AccordoionComponent implements OnInit {
-  @Input() cardTitle: any[] = [];
-  @Input() dataArray: any[] = [];
+  @Input() item: any;
+  @Input() AssetTypes: any[] = [];
+  @Input() valueLength: any[] = [];
+
+  assetValues: any[] = [];
 
   constructor() {}
 
   ngOnInit(): void {
+    this.item.values.forEach((i: any) => {
+      this.assetValues.push(i);
+    });
 
+    this.assetValues.forEach((asset) => {
+      if (asset.status === 'Asset Approved') {
+        asset.bgColor = 'bg-green-600';
+      }
+      if (asset.status === 'Asset Rejected By Approver') {
+        asset.bgColor = 'bg-rose-500';
+      }
+      if (asset.status === 'Asset Registeration Pending') {
+        asset.bgColor = 'bg-orange-500';
+      }
+      if (asset.status === 'Asset Approval Pending') {
+        asset.bgColor = 'bg-amber-400';
+      }
+    });
 
-    // for (const item of this.cardTitle) {
-    //   console.log('Our Data : ' + item);
-    // }
-
-    // console.log(this.cardTitle);
-
-    // this.cardTitle.forEach((e)=>{
-
-    //   console.log(e);
-    // })
-    // this.cardTitle.forEach((item) => {
-    //   console.log(item);
-    // });
-    // console.log(this.cardTitle);
+    console.log(this.assetValues);
   }
 }

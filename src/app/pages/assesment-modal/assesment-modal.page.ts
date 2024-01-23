@@ -22,17 +22,15 @@ export class AssesmentModalPage implements OnInit {
       status: 'Asset Approval Pending',
     },
     {
+      AssetType: 'bin',
+      AssetName: 'bin 1',
+      status: 'Asset Rejected By Approver',
+    },
+    {
       AssetType: 'silo',
       AssetName: 'silo 2',
       status: 'Asset Rejected By Approver',
     },
-
-    {
-      AssetType: 'Hopper',
-      AssetName: 'Hopper 4',
-      status: 'Asset Approval Pending',
-    },
-
     {
       AssetType: 'Hopper',
       AssetName: 'Hopper 1',
@@ -70,9 +68,9 @@ export class AssesmentModalPage implements OnInit {
       status: 'Asset Registeration Pending',
     },
     {
-      AssetType: 'bin',
-      AssetName: 'bin 1',
-      status: 'Asset Rejected By Approver',
+      AssetType: 'Hopper',
+      AssetName: 'Hopper 4',
+      status: 'Asset Approval Pending',
     },
   ];
 

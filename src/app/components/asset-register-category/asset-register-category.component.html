@@ -1,0 +1,31 @@
+<ion-button id="open-modal" expand="block">Open Sheet Modal</ion-button>
+
+<ion-modal trigger="open-modal" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+  <ng-template>
+    <div class="block">
+      <ion-grid>
+        <div>Select Category</div>
+        <ion-row class="flex">
+          <ion-col size="2" class="flex border-2">
+            <div>1</div>
+          </ion-col>
+          <ion-col size="2" class="flex border-2">
+            <div>2</div>
+          </ion-col>
+          <ion-col size="2" class="flex border-2">
+            <div>3</div>
+          </ion-col>
+          <ion-col size="2" class="flex border-2">
+            <div>4</div>
+          </ion-col>
+          <ion-col size="2" class="flex border-2">
+            <div>5</div>
+          </ion-col>
+          <ion-col size="2" class="flex border-2">
+            <div>6</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ng-template>
+</ion-modal>

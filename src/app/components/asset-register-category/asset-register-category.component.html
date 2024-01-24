@@ -1,39 +1,48 @@
 <div
-  class="fixed bottom-0 -ml-[5px] border custom w-full bg-gray-800 text-white"
-  [ngClass]="{ hidden: !isBarOpen }"
+  class="custom fixed md:h-1/4 w-full h-2/4 bottom-0 bg-white border border-white-200 rounded-lg shadow bg-white-800 transform transition-transform duration-800"
+  [ngClass]="{ 'translate-y-full': isBarOpen, hidden: isBarOpen }"
 >
-  <div class="container mx-auto">
-    <!-- Your bottom bar content goes here -->
-    <div class="max-w-sm rounded shadow-lg">
-      <button
-        (click)="toggleBar()"
-        class="absolute top-2 right-2 bg-gray-800 text-white p-2 rounded-full cursor-pointer"
-      >
-        &#10006;
-      </button>
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">Card Title</div>
-        <p class="text-gray-700 text-base">
-          This is the content of the card. You can add more text or customize it
-          as needed.
-        </p>
-      </div>
-      <div class="px-6 py-4">
-        <span
-          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
-          >#Tag1</span
-        >
-        <span
-          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700"
-          >#Tag2</span
-        >
-      </div>
+  <!-- [class]="!isBarOpen ? 'translate-y-full' : ''"  -->
+
+  <!-- <div class="container p-6"> -->
+  <!-- <div class="w-full rounded"> -->
+  <div class="absolute right-8 -mt-7 w-16 h-16 bgcolordiv rounded-full">
+    <button
+      (click)="toggleBar()"
+      class="absolute ml-2 mt-2 w-12 h-12 bg-gray-800 text-white rounded-full cursor-pointer transition-all duration-800"
+    >
+      &#10006;
+    </button>
+  </div>
+  <div class="m-4">
+    <div class="font-bold text-[40px] mb-2">Select Category</div>
+  </div>
+  <div class="p-4 grid md:grid-cols-8 gap-8 grid-cols-4 bgColor w-full">
+    <div class="border-2 p-2 bgColor">
+      <img class="w-24" src="../../../assets/icon/bag.svg" alt="a" />
+    </div>
+    <div class="border-2 p-2 bgColor">
+      <img class="w-24" src="../../../assets/icon/bag.svg" alt="a" />
+    </div>
+    <div class="border-2 p-1 bgColor">
+      <img class="w-24" src="../../../assets/icon/bag.svg" alt="" />
+    </div>
+    <div class="border-2 p-1 bgColor">
+      <img class="w-24" src="../../../assets/icon/bag.svg" alt="" />
+    </div>
+    <div class="border-2 p-1 bgColor">
+      <img class="w-24" src="../../../assets/icon/bag.svg" alt="a" />
+    </div>
+    <div class="border-2 p-1 bgColor">
+      <img class="w-24" src="../../../assets/icon/bag.svg" alt="a" />
+    </div>
+    <div class="border-2 p-1 bgColor">
+      <img class="w-24" src="../../../assets/icon/bag.svg" alt="a" />
+    </div>
+    <div class="border-2 p-1 bgColor">
+      <img class="w-24" src="../../../assets/icon/bag.svg" alt="a" />
     </div>
   </div>
+  <!-- </div> -->
+  <!-- </div> -->
 </div>
-<button
-  (click)="toggleBar()"
-  class="fixed top-16 justify-center right-4 bg-blue-500 text-white px-4 py-2 rounded"
->
-  Toggle Bar
-</button>

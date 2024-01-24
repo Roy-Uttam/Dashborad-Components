@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { AssetRegisterCategoryComponent } from 'src/app/components/asset-register-category/asset-register-category.component';
+import { AssetResgisterComponent } from 'src/app/components/asset-resgister/asset-resgister.component';
 
 @Component({
   selector: 'app-asset-register',
@@ -13,7 +14,7 @@ import { AssetRegisterCategoryComponent } from 'src/app/components/asset-registe
     IonicModule,
     CommonModule,
     FormsModule,
-    AssetRegisterCategoryComponent,
+    AssetResgisterComponent,
   ],
 })
 export class AssetRegisterPage implements OnInit {

@@ -1,44 +1,234 @@
 <div
-  class="custom fixed md:h-1/4 w-full h-2/4 bottom-0 bg-white border border-white-200 rounded-lg shadow bg-white-800 transform transition-transform duration-800"
+  class="custom -ml-3 fixed w-full h-2/4 bottom-0 bg-white border border-white-200 rounded-lg shadow bg-white-800 transform transition-transform duration-800"
   [ngClass]="{ 'translate-y-full': isBarOpen, hidden: isBarOpen }"
 >
-
-  <div class="absolute right-8 -mt-7 md:-mt-14 md:w-28 md:h-28 w-16 h-16 bgcolordiv rounded-full">
+  <div
+    class="absolute right-7 -mt-7 md:-mt-14 md:w-28 md:h-28 w-16 h-16 bgcolordiv rounded-full"
+  >
     <button
       (click)="toggleBar()"
-      class="absolute ml-2 mt-2 md:w-20 md:h-20 w-12 h-12 bg-gray-800 text-white rounded-full cursor-pointer transition-all duration-800"
+      class="absolute md:ml-4 md:mt-4 ml-2 mt-2 md:w-20 md:h-20 w-12 h-12 bg-black text-white rounded-full cursor-pointer transition-all duration-800"
     >
-      &#10006;
+      <img
+        class="ml-3 w-6 md:ml-5 md:w-10"
+        src="../../../assets/icon/close.svg"
+        alt=""
+      />
     </button>
   </div>
   <div class="m-4">
-    <div class="font-bold text-[20px] md:text-[20px] mb-2">Select Category</div>
-  </div>
-  <div class="p-4 grid md:grid-cols-8 gap-8 grid-cols-4 bgColor w-full">
-    <div class="border-2 p-2 bgColor">
-      <img class="w-24" src="../../../assets/icon/bag.svg" alt="a" />
-    </div>
-    <div class="border-2 p-2 bgColor">
-      <img class="w-24" src="../../../assets/icon/bag.svg" alt="a" />
-    </div>
-    <div class="border-2 p-1 bgColor">
-      <img class="w-24" src="../../../assets/icon/bag.svg" alt="" />
-    </div>
-    <div class="border-2 p-1 bgColor">
-      <img class="w-24" src="../../../assets/icon/bag.svg" alt="" />
-    </div>
-    <div class="border-2 p-1 bgColor">
-      <img class="w-24" src="../../../assets/icon/bag.svg" alt="a" />
-    </div>
-    <div class="border-2 p-1 bgColor">
-      <img class="w-24" src="../../../assets/icon/bag.svg" alt="a" />
-    </div>
-    <div class="border-2 p-1 bgColor">
-      <img class="w-24" src="../../../assets/icon/bag.svg" alt="a" />
-    </div>
-    <div class="border-2 p-1 bgColor">
-      <img class="w-24" src="../../../assets/icon/bag.svg" alt="a" />
-    </div>
+    <div class="font-bold text-[20px] md:text-[24px] mb-2">Select Category</div>
   </div>
 
+  <!-- <div class="p-4 grid grid-cols-8 gap-8">
+    <div class="">
+      <div
+        class="border-2 rounded p-2 bgColor h-full w-full flex justify-center items-center"
+      >
+        <img class="w-full" src="../../../assets/icon/bag.svg" alt="a" />
+      </div>
+      <div class="text-wrap text-center">Sim</div>
+    </div>
+
+    <div class="">
+      <div
+        class="border-2 rounded p-2 bgColor h-full w-full flex justify-center items-center"
+      >
+        <img class="w-full" src="../../../assets/icon/danger.svg" alt="a" />
+      </div>
+      <div class="text-wrap text-center">Material management</div>
+    </div>
+    <div class="">
+      <div
+        class="border-2 rounded p-2 bgColor h-full flex justify-center items-center"
+      >
+        <img class="w-full" src="../../../assets/icon/danger.svg" alt="a" />
+      </div>
+      <div class="text-wrap text-center">Sim</div>
+    </div>
+    <div class="">
+      <div
+        class="border-2 rounded p-2 bgColor h-full flex justify-center items-center"
+      >
+        <img class="w-full" src="../../../assets/icon/danger.svg" alt="a" />
+      </div>
+      <div class="text-wrap text-center">Sim</div>
+    </div>
+    <div class="">
+      <div
+        class="border-2 rounded p-2 bgColor h-full flex justify-center items-center"
+      >
+        <img class="w-full" src="../../../assets/icon/danger.svg" alt="a" />
+      </div>
+      <div class="text-wrap text-center">Sim</div>
+    </div>
+    <div class="">
+      <div
+        class="border-2 rounded p-2 bgColor h-full flex justify-center items-center"
+      >
+        <img class="w-full" src="../../../assets/icon/danger.svg" alt="a" />
+      </div>
+      <div class="text-wrap text-center">Sim</div>
+    </div>
+    <div class="">
+      <div
+        class="border-2 rounded p-2 bgColor h-full flex justify-center items-center"
+      >
+        <img class="w-full" src="../../../assets/icon/danger.svg" alt="a" />
+      </div>
+      <div class="text-wrap text-center">Sim</div>
+    </div>
+    <div class="">
+      <div
+        class="border-2 rounded p-2 bgColor h-full flex justify-center items-center"
+      >
+        <img class="w-full" src="../../../assets/icon/danger.svg" alt="a" />
+      </div>
+      <div class="text-wrap text-center">Sim</div>
+    </div>
+  </div> -->
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3" sizeMd="1.50" sizeLg="1.50" sizeSm="3">
+        <ion-img
+          class="border-2 p-4 bgColor"
+          src="../../../assets/icon/danger.svg"
+          alt=""
+        ></ion-img>
+        <ion-text style="text-align: center" color="primary"> Sim </ion-text>
+      </ion-col>
+
+      <ion-col size="3" sizeMd="1.50" sizeLg="1.50" sizeSm="3">
+        <ion-img
+          class="border-2 p-4 bgColor"
+          src="../../../assets/icon/danger.svg"
+          alt=""
+        ></ion-img>
+        <ion-text color="primary">
+          <h1>Sim</h1>
+        </ion-text>
+      </ion-col>
+      <ion-col size="3" sizeMd="1.50" sizeLg="1.50" sizeSm="3">
+        <ion-img
+          class="border-2 p-4 bgColor"
+          src="../../../assets/icon/danger.svg"
+          alt=""
+        ></ion-img>
+        <ion-text color="primary">
+          <h1>Sim</h1>
+        </ion-text>
+      </ion-col>
+      <ion-col size="3" sizeMd="1.50" sizeLg="1.50" sizeSm="3">
+        <ion-img
+          class="border-2 p-4 bgColor"
+          src="../../../assets/icon/danger.svg"
+          alt=""
+        ></ion-img>
+        <ion-text color="primary">
+          <h1>Sim</h1>
+        </ion-text>
+      </ion-col>
+      <ion-col size="3" sizeMd="1.50" sizeLg="1.50" sizeSm="3">
+        <ion-img
+          class="border-2 p-4 bgColor"
+          src="../../../assets/icon/danger.svg"
+          alt=""
+        ></ion-img>
+        <ion-text color="primary">
+          <h1>Sim</h1>
+        </ion-text>
+      </ion-col>
+      <ion-col size="3" sizeMd="1.50" sizeLg="1.50" sizeSm="3">
+        <ion-img
+          class="border-2 p-4 bgColor"
+          src="../../../assets/icon/danger.svg"
+          alt=""
+        ></ion-img>
+        <ion-text color="primary">
+          <h1>Sim</h1>
+        </ion-text>
+      </ion-col>
+      <ion-col size="3" sizeMd="1.50" sizeLg="1.50" sizeSm="3">
+        <ion-img
+          class="border-2 p-4 bgColor"
+          src="../../../assets/icon/danger.svg"
+          alt=""
+        ></ion-img>
+        <ion-text color="primary">
+          <h1>Sim</h1>
+        </ion-text>
+      </ion-col>
+      <ion-col size="3" sizeMd="1.50" sizeLg="1.50" sizeSm="3">
+        <ion-img
+          class="border-2 p-4 bgColor"
+          src="../../../assets/icon/danger.svg"
+          alt=""
+        ></ion-img>
+        <ion-text color="primary">
+          <h1>Sim</h1>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </div>
+
+<!-- </div> -->
+
+<!-- <div class="p-4 grid grid-cols-8 gap-8">
+  <div class="h-[131px] w-[100px]">
+    <div class="border-2 rounded p-2 bgColor h-[100px] w-[100px]">
+      <img class="w-full" src="../../../assets/icon/danger.svg" alt="a" />
+    </div>
+    <div class="h-[19px] w-[30px]">Sim</div>
+  </div>
+
+  <div class="h-[131px] w-[100px]">
+    <div class="border-2 rounded p-2 bgColor h-[100px] w-[100px]">
+      <img class="w-full" src="../../../assets/icon/bag.svg" alt="a" />
+    </div>
+    <div class="flex items-center h-[19px] w-[30px]">Meterial management</div>
+  </div>
+
+  <div class="h-[131px] w-[100px]">
+    <div class="border-2 rounded p-2 bgColor h-[100px] w-[100px]">
+      <img class="w-full" src="../../../assets/icon/bag.svg" alt="a" />
+    </div>
+    <div class="h-[19px] w-[30px]">Electrical</div>
+  </div>
+
+  <div class="h-[131px] w-[100px]">
+    <div class="border-2 rounded p-2 bgColor h-[100px] w-[100px]">
+      <img class="w-full" src="../../../assets/icon/bag.svg" alt="a" />
+    </div>
+    <div class="h-[19px] w-[30px]">Meterial</div>
+  </div>
+
+  <div class="h-[131px] w-[100px]">
+    <div class="border-2 rounded p-2 bgColor h-[100px] w-[100px]">
+      <img class="w-full" src="../../../assets/icon/bag.svg" alt="a" />
+    </div>
+    <div class="h-[19px] w-[30px]">Meterial</div>
+  </div>
+
+  <div class="h-[131px] w-[100px]">
+    <div class="border-2 rounded p-2 bgColor h-[100px] w-[100px]">
+      <img class="w-full" src="../../../assets/icon/bag.svg" alt="a" />
+    </div>
+    <div class="h-[19px] w-[30px]">management</div>
+  </div>
+
+  <div class="h-[131px] w-[100px]">
+    <div class="border-2 rounded p-2 bgColor h-[100px] w-[100px]">
+      <img class="w-full" src="../../../assets/icon/bag.svg" alt="a" />
+    </div>
+    <div class="h-[19px] w-[30px]">Meterial</div>
+  </div>
+
+  <div class="h-[131px] w-[100px]">
+    <div class="border-2 rounded p-2 bgColor h-[100px] w-[100px]">
+      <img class="w-full" src="../../../assets/icon/bag.svg" alt="a" />
+    </div>
+    <div class="h-[19px] w-[30px]">Meterial</div>
+  </div>
+</div> -->

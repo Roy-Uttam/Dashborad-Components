@@ -1,0 +1,70 @@
+<ion-split-pane when="(min-width: 4440px)" contentId="main-content">
+  <ion-menu contentId="main-content" type="overlay" side="end">
+    <!-- <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu Content</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+    <ion-content class="ion-padding">
+      <ion-menu-toggle class="ion-padding">
+        <button class="h-8 w-8" style="float: right">
+          <img class="" src="../../../assets/icon/close1.svg" alt="" />
+        </button>
+        <button class="h-8 w-8" style="float: left">
+          <img class="" src="../../../assets/icon/power.svg" alt="" />
+        </button>
+      </ion-menu-toggle>
+
+      <ion-chip class="rounded-r-full rounded-s-full mt-8 -ml-[2px] w-full">
+        <ion-avatar style="float: left" class="w-9 -mt-4">
+          <img
+            class="ml-1"
+            alt="Silhouette of a person's head"
+            src="https://ionicframework.com/docs/img/demos/avatar.svg"
+          />
+        </ion-avatar>
+        <div class="ion-justify-content-between ml-2 w-full">
+          <div class="text-[16px] font-bold">Uttam Roy</div>
+          <div class="text-[12px]">uttam.roy.holcim.com</div>
+        </div>
+
+        <ion-img
+          style="float: right"
+          class="w-8"
+          src="../../../assets/icon/forward.svg"
+        ></ion-img>
+      </ion-chip>
+
+      <ion-accordion-group>
+        <ion-accordion value="first">
+          <ion-item slot="header" color="light">
+            <ion-label>First Accordion</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">First Content</div>
+        </ion-accordion>
+      </ion-accordion-group>
+    </ion-content>
+    <ion-footer class="ion-no-border ion-padding mb-3">
+      <ion-toolbar color="translucent">
+        <ion-text style="text-align: center" color="secondary"
+          ><h1 class="text-[12px] font-bold">Boots on Ground Pro</h1></ion-text
+        >
+        <ion-text style="text-align: center"
+          ><p class="text-[10px]">Powered by Holcim-GDH</p></ion-text
+        >
+      </ion-toolbar>
+    </ion-footer>
+  </ion-menu>
+  <div class="ion-page" id="main-content">
+    <!-- <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+    <ion-content class="ion-padding">
+      <ion-menu-toggle>
+        <ion-button>Click to open the menu</ion-button>
+      </ion-menu-toggle>
+    </ion-content>
+  </div>
+</ion-split-pane>

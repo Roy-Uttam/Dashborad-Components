@@ -19,5 +19,9 @@ export const routes: Routes = [
     path: 'asset-register',
     loadComponent: () => import('./pages/asset-register/asset-register.page').then( m => m.AssetRegisterPage)
   },
+  {
+    path: 'navigation-menu',
+    loadComponent: () => import('./pages/navigation-menu/navigation-menu.page').then( m => m.NavigationMenuPage)
+  },
 
 ];

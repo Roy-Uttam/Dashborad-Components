@@ -1,0 +1,24 @@
+ion-menu::part(container) {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+ion-split-pane {
+  --side-width: 350px;
+  --side-max-width: 350px;
+  --border: 1px dashed #b3baff;
+
+  ion-chip {
+    --background: var(--ion-color-chip) !important;
+  }
+}
+ion-menu {
+  //   --background: var(--ion-color-white) !important;
+  --ion-background-color: #ffffff;
+  ion-content {
+    --background: var(--ion-color-white) !important;
+  }
+}
+ion-icon {
+  color: #4ca1b1;
+}

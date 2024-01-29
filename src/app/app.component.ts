@@ -27,6 +27,8 @@ import { addIcons } from 'ionicons';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
+  styleUrls: ['./app.component.scss'],
+
   standalone: true,
   imports: [
     IonRouterOutlet,
@@ -49,8 +51,7 @@ import { addIcons } from 'ionicons';
     IonApp,
     IonMenu,
     IonMenuToggle,
-    IonAccordion
-
+    IonAccordion,
   ],
 })
 export class AppComponent {

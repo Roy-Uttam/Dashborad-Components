@@ -4,7 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { AssetRegisterCategoryComponent } from 'src/app/components/asset-register-category/asset-register-category.component';
 import { AssetResgisterComponent } from 'src/app/components/asset-resgister/asset-resgister.component';
-
+import { ellipse } from 'ionicons/icons';
+import { addIcons } from 'ionicons';
 @Component({
   selector: 'app-asset-register',
   templateUrl: './asset-register.page.html',
@@ -18,7 +19,11 @@ import { AssetResgisterComponent } from 'src/app/components/asset-resgister/asse
   ],
 })
 export class AssetRegisterPage implements OnInit {
-  constructor() {}
+  constructor() {
+    addIcons({
+      ellipse,
+    });
+  }
 
   ngOnInit() {}
 }

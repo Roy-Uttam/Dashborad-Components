@@ -25,5 +25,9 @@ export const routes: Routes = [
       import('./pages/asset-register/asset-register.page').then(
         (m) => m.AssetRegisterPage
       ),
+  },  {
+    path: 'test',
+    loadComponent: () => import('./pages/test/test.page').then( m => m.TestPage)
   },
+
 ];

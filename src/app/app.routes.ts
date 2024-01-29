@@ -11,17 +11,19 @@ export const routes: Routes = [
     path: 'dashboard',
     loadComponent: () =>
       import('./pages/dashboard/dashboard.page').then((m) => m.DashboardPage),
-  },  {
+  },
+  {
     path: 'assesment-modal',
-    loadComponent: () => import('./pages/assesment-modal/assesment-modal.page').then( m => m.AssesmentModalPage)
+    loadComponent: () =>
+      import('./pages/assesment-modal/assesment-modal.page').then(
+        (m) => m.AssesmentModalPage
+      ),
   },
   {
     path: 'asset-register',
-    loadComponent: () => import('./pages/asset-register/asset-register.page').then( m => m.AssetRegisterPage)
+    loadComponent: () =>
+      import('./pages/asset-register/asset-register.page').then(
+        (m) => m.AssetRegisterPage
+      ),
   },
-  {
-    path: 'navigation-menu',
-    loadComponent: () => import('./pages/navigation-menu/navigation-menu.page').then( m => m.NavigationMenuPage)
-  },
-
 ];

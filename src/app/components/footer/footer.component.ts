@@ -4,16 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 @Component({
-  selector: 'app-side-menu',
-  templateUrl: './side-menu.component.html',
-  styleUrls: ['./side-menu.component.scss'],
+  selector: 'app-footer',
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.scss'],
   standalone: true,
   imports: [IonicModule, CommonModule, FormsModule],
 })
-export class SideMenuComponent  implements OnInit {
-
-  constructor() { }
+export class FooterComponent implements OnInit {
+  constructor() {}
 
   ngOnInit() {}
-
 }

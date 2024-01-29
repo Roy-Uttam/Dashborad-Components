@@ -8,6 +8,8 @@ import { ProgressComponent } from 'src/app/components/progress/progress.componen
 import { LegendsComponent } from 'src/app/components/legends/legends.component';
 import { FindingsComponent } from 'src/app/components/findings/findings.component';
 import { RoundComponent } from 'src/app/components/round/round.component';
+import { FooterComponent } from 'src/app/components/footer/footer.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -23,9 +25,12 @@ import { RoundComponent } from 'src/app/components/round/round.component';
     ProgressComponent,
     LegendsComponent,
     FindingsComponent,
-    RoundComponent
+    RoundComponent,
+    FooterComponent,
   ],
 })
-export class DashboardPage {
+export class DashboardPage implements OnInit {
   constructor() {}
+
+  ngOnInit() {}
 }

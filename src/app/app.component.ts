@@ -22,7 +22,15 @@ import {
   IonMenuToggle,
   IonAccordion,
 } from '@ionic/angular/standalone';
-import { ellipse } from 'ionicons/icons';
+import {
+  ellipse,
+  mapOutline,
+  homeOutline,
+  clipboardOutline,
+  helpCircleOutline,
+  personCircleOutline,
+  notificationsOutline,
+} from 'ionicons/icons';
 import { addIcons } from 'ionicons';
 @Component({
   selector: 'app-root',
@@ -52,12 +60,19 @@ import { addIcons } from 'ionicons';
     IonMenu,
     IonMenuToggle,
     IonAccordion,
+    
   ],
 })
 export class AppComponent {
   constructor() {
     addIcons({
       ellipse,
+      mapOutline,
+      homeOutline,
+      clipboardOutline,
+      helpCircleOutline,
+      personCircleOutline,
+      notificationsOutline,
     });
   }
 }

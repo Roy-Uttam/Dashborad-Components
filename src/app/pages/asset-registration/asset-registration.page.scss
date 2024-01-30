@@ -1,0 +1,23 @@
+.customBg {
+  background-color: #d6eaeb;
+}
+
+ion-segment-button::part(indicator-background) {
+  background: #08a391;
+}
+
+// ion-segment-button {
+//   --indicator-box-shadow: transparent !important;
+//   --background: white;
+//   --color: #2d2e87;
+//   --background-checked: linear-gradient(to right, #2d2e87, #0083cb) !important;
+//   --color-checked: white;
+//   border-radius: 0.5rem !important;
+//   padding: 20px;
+//   margin: 20;
+// }
+
+ion-segment ion-segment-button.segment-button-checked {
+    background-color: #08a391;
+  width: 500px;
+}

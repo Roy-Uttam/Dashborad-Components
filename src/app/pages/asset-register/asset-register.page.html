@@ -4,20 +4,20 @@
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
-  <ion-card>
+  <!-- <ion-card>
     <ion-grid>
       <ion-row class="my-auto ion-padding gap-x-8">
         <ion-col size="2" class="h-4 w-4">
           <div class="h-24 w-24 customBg rounded-full">
             <ion-img
-              class="h-10"
+              class="h-12 w-12"
               src="../../../assets/icon/bag.svg"
               alt=""
             ></ion-img>
           </div>
         </ion-col>
-        <ion-col size="4">
-          <div class="h-16 w-44 border-2 customBg rounded-full">
+        <ion-col size="2">
+          <div class="h-24 w-24 border-2 customBg rounded-full">
             <ion-img
               class="h-10"
               src="../../../assets/icon/danger.svg"
@@ -47,7 +47,7 @@
     </ion-grid>
 
     <ion-card-content class="w-full"> <div></div></ion-card-content>
-  </ion-card>
+  </ion-card> -->
 
   <!-- <ion-grid>
     <ion-row>
@@ -56,4 +56,84 @@
       </ion-col>
     </ion-row>
   </ion-grid> -->
+
+  <ion-card>
+    <ion-card-header style="height: 150px">
+      <ion-tabs>
+        <ion-tab-bar style="height: 100%" slot="bottom" color="primary">
+          <ion-tab-button tab="dashboard" href="/dashboard">
+            <div class="h-16 w-16 border-2 customBg rounded-full">
+              <ion-icon
+                size="large"
+                class="mt-3"
+                aria-hidden="true"
+                name="home-outline"
+              ></ion-icon>
+            </div>
+          </ion-tab-button>
+
+          <ion-tab-button tab="map-view" href="/map-view">
+            <div class="h-16 w-full border-2 customBg rounded-full">
+              <ion-icon
+                size="large"
+                class="mt-3"
+                aria-hidden="true"
+                name="map-outline"
+              ></ion-icon>
+            </div>
+          </ion-tab-button>
+
+          <ion-tab-button tab="assessment" href="/assessment">
+            <div class="h-16 w-16 border-2 customBg rounded-full">
+              <ion-icon
+                size="large"
+                class="mt-3"
+                aria-hidden="true"
+                name="map-outline"
+              ></ion-icon>
+            </div>
+          </ion-tab-button>
+
+          <ion-tab-button tab="asset-register" href="/asset-register">
+            <div class="h-16 w-16 border-2 customBg rounded-full">
+              <ion-icon
+                size="large"
+                class="mt-3"
+                aria-hidden="true"
+                name="clipboard-outline"
+              ></ion-icon>
+            </div>
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+    </ion-card-header>
+    <ion-card-content> </ion-card-content>
+  </ion-card>
+
+  <!-- <ion-content [fullscreen]="true">
+    <app-customtabs [selectedTab]="selectedTab"></app-customtabs>
+  </ion-content> -->
+
+  <ion-segment [(ngModel)]="segment">
+    <ion-segment-button value="user"> User Info </ion-segment-button>
+    <ion-segment-button value="card"> Card Info </ion-segment-button>
+    <ion-segment-button value="change"> Change Password </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="segment">
+    <ion-card *ngSwitchCase="'user'">
+      <ion-card-header> User Info </ion-card-header>
+      <ion-card-content> Your user info content here </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngSwitchCase="'card'">
+      <ion-card-header> Card Info </ion-card-header>
+      <ion-card-content> Your card info content here </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngSwitchCase="'change'">
+      <ion-card-header> Change Password </ion-card-header>
+      <ion-card-content> Your change password form here </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

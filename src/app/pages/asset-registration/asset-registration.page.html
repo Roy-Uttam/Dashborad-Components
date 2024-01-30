@@ -1,0 +1,89 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>AssetRegistration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">AssetRegistration</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header style="height: 150px" class="border-b-2">
+      <ion-segment
+        class="border mr-4 p-4 w-full flex gap-4"
+        [(ngModel)]="segment"
+        value="user"
+      >
+        <ion-segment-button
+          class=" rounded-full"
+          value="user"
+          checked
+        >
+          <img
+            class="p-4 h-16 w-16"
+            alt="Silhouette of a person's head"
+            src="../../../assets/icon/bag.svg"
+          />
+        </ion-segment-button>
+
+        <ion-segment-button
+          class=" rounded-full"
+          value="card"
+        >
+          <img
+            class="p-4 h-16 w-16"
+            alt="Silhouette of a person's head"
+            src="../../../assets/icon/danger.svg"
+          />
+        </ion-segment-button>
+        <ion-segment-button
+          class=" rounded-full"
+          value="change"
+        >
+          <img
+            class="p-4 h-16 w-16"
+            alt="Silhouette of a person's head"
+            src="../../../assets/icon/bag.svg"
+          />
+        </ion-segment-button>
+        <ion-segment-button
+          class=" rounded-full"
+          value="part4"
+        >
+          <img
+            class="p-4 h-16 w-16"
+            alt="Silhouette of a person's head"
+            src="../../../assets/icon/danger.svg"
+          />
+        </ion-segment-button>
+      </ion-segment>
+    </ion-card-header>
+    <ion-card-content>
+      @switch (segment) { @case ("user") {
+      <ion-card>
+        <ion-card-header> User Info </ion-card-header>
+        <ion-card-content> Your user info content here </ion-card-content>
+      </ion-card>
+      } @case ("card") {
+      <ion-card>
+        <ion-card-header> Card Info </ion-card-header>
+        <ion-card-content> Your card info content here </ion-card-content>
+      </ion-card>
+      } @case ("change") {
+      <ion-card>
+        <ion-card-header> Change Password </ion-card-header>
+        <ion-card-content> Your change password form here </ion-card-content>
+      </ion-card>
+      } @case ("part4") {
+      <ion-card>
+        <ion-card-header> Change Password </ion-card-header>
+        <ion-card-content> Your change password form here </ion-card-content>
+      </ion-card>
+      }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

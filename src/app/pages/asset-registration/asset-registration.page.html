@@ -17,14 +17,10 @@
         color="white"
         class="border p-4 flex gap-4"
         value="custom1"
-        [(ngModel)]="selectedSegment"
+        [(ngModel)]="segment"
         (ionChange)="segmentChanged($event)"
       >
-        <ion-segment-button
-          class=""
-          value="custom1"
-          [class.checked]="selectedSegment === 'custom1'"
-        >
+        <ion-segment-button value="custom1">
           <div class="csss justify-center rounded-full">
             <img
               class="p-4 h-16 w-16 image"
@@ -53,7 +49,7 @@
           </div>
         </ion-segment-button>
         <ion-segment-button class="" value="custom4">
-          <div class="csss justify-center rounded-full">
+          <div id="target" class="csss justify-center rounded-full">
             <img
               class="p-4 h-16 w-16 image"
               alt="Silhouette of a person's head"
@@ -62,14 +58,16 @@
           </div>
         </ion-segment-button>
 
-        <!-- <ion-segment-button (click)="onButtonClick()" value="custom5">
+        <!-- <button (click)="appendHtml(event)">Append HTML</button> -->
+
+        <!-- <ion-segment-button onclick = "favourite(this)" value="custom5">
           <div class="csss justify-center rounded-full">
             <img
               class="p-4 h-16 w-16 image"
               alt="Silhouette of a person's head"
               src="../../../assets/icon/bag.svg"
             />
-            <div *ngIf="segment-button-checked">
+            <div class="appendedclass">
               <h1>Title is checked!</h1>
             </div>
           </div>

@@ -13,36 +13,30 @@ import { IonicModule, SegmentChangeEventDetail } from '@ionic/angular';
 export class AssetRegistrationPage implements OnInit {
   segment: string = 'custom1';
 
-  selectedSegment: string = 'segment1'; // Default selected segment
-
-  // Reference to the element you want to append
   elementToAppend: HTMLElement;
 
   constructor(private renderer: Renderer2, private el: ElementRef) {
-    // Initialize or create the element you want to append
     this.elementToAppend = this.renderer.createElement('div');
     this.renderer.addClass(this.elementToAppend, 'appended-content');
     this.renderer.appendChild(
       this.elementToAppend,
-      this.renderer.createText('Electrical')
+      this.renderer.createText(this.segment)
     );
   }
 
-  segmentChanged(event: CustomEvent<SegmentChangeEventDetail>) {
-    console.log('Segment changed', event.detail.value);
+  segmentChanged(event: any) {
 
-    // Remove the appended element from the previous segment (if any)
     this.removeAppendedElement();
 
-    // Append the element to the content of the clicked segment button
     const segmentButton = this.el.nativeElement.querySelector(
       `ion-segment-button[value="${event.detail.value}"]`
     );
-    this.renderer.appendChild(segmentButton, this.elementToAppend);
+    const targetElement = segmentButton.querySelector(`ion-segment-button div`);
+
+    this.renderer.appendChild(targetElement, this.elementToAppend);
   }
 
   private removeAppendedElement() {
-    // Remove the appended element from its current parent
     if (this.elementToAppend.parentNode) {
       this.renderer.removeChild(
         this.elementToAppend.parentNode,
@@ -50,6 +44,29 @@ export class AssetRegistrationPage implements OnInit {
       );
     }
   }
+
+  // segmentChanged(event: any) {
+  //   // console.log('Selected segment:', this.segment);
+
+  //   const segmentButton = this.el.nativeElement.querySelector(
+  //     `ion-segment-button[value="${event.detail.value}"]`
+  //   );
+
+  //   const newDiv = this.renderer.createElement('div');
+
+  //   const targetElement = segmentButton.querySelector(`ion-segment-button div`);
+
+  //   this.renderer.setProperty(
+  //     newDiv,
+  //     'innerHTML',
+  //     '<p>This is dynamically appended HTML!</p>'
+  //   );
+
+  //   this.renderer.appendChild(targetElement, newDiv);
+
+  //   console.log(targetElement);
+
+  // }
 
   ngOnInit() {}
 }

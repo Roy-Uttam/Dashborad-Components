@@ -3,21 +3,35 @@
 }
 
 ion-segment-button::part(indicator-background) {
-  background: #08a391;
+  display: none;
 }
 
 // ion-segment-button {
-//   --indicator-box-shadow: transparent !important;
-//   --background: white;
-//   --color: #2d2e87;
-//   --background-checked: linear-gradient(to right, #2d2e87, #0083cb) !important;
-//   --color-checked: white;
-//   border-radius: 0.5rem !important;
-//   padding: 20px;
-//   margin: 20;
+// --indicator-box-shadow: transparent !important;
+// --background: #d6eaeb;
+// --color: #2d2e87;
+// --background-checked: linear-gradient(to right, #2d2e87, #0083cb) !important;
+// --color-checked: white;
+// border-radius: 100px !important;
 // }
 
 ion-segment ion-segment-button.segment-button-checked {
-    background-color: #08a391;
-  width: 500px;
+  .csss {
+    fill: #ffffff;
+    display: flex;
+    align-items: center;
+    // height: 250px;
+    width: 350px;
+    background-color: #0991a3;
+    border-radius: 50px;
+  }
+
+  .image {
+    filter: invert(100%) sepia(10%) saturate(0%) hue-rotate(91deg)
+      brightness(104%) contrast(104%);
+  }
+}
+.csss {
+  background-color: #d6eaeb;
+  // border-radius: 100px;
 }

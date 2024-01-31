@@ -14,74 +14,111 @@
   <ion-card>
     <ion-card-header style="height: 150px" class="border-b-2">
       <ion-segment
-        class="border mr-4 p-4 w-full flex gap-4"
-        [(ngModel)]="segment"
-        value="user"
+        color="white"
+        class="border p-4 flex gap-4"
+        value="custom1"
+        [(ngModel)]="selectedSegment"
+        (ionChange)="segmentChanged($event)"
       >
         <ion-segment-button
-          class=" rounded-full"
-          value="user"
-          checked
+          class=""
+          value="custom1"
+          [class.checked]="selectedSegment === 'custom1'"
         >
-          <img
-            class="p-4 h-16 w-16"
-            alt="Silhouette of a person's head"
-            src="../../../assets/icon/bag.svg"
-          />
+          <div class="csss justify-center rounded-full">
+            <img
+              class="p-4 h-16 w-16 image"
+              alt="Silhouette of a person's head"
+              src="../../../assets/icon/sim.svg"
+            />
+          </div>
+        </ion-segment-button>
+
+        <ion-segment-button class="" value="custom2">
+          <div class="csss justify-center rounded-full">
+            <img
+              class="p-4 h-16 w-16 image"
+              alt="Silhouette of a person's head"
+              src="../../../assets/icon/danger.svg"
+            />
+          </div>
+        </ion-segment-button>
+        <ion-segment-button class="" value="custom3">
+          <div class="csss justify-center rounded-full">
+            <img
+              class="p-4 h-16 w-16 image"
+              alt="Silhouette of a person's head"
+              src="../../../assets/icon/sim.svg"
+            />
+          </div>
+        </ion-segment-button>
+        <ion-segment-button class="" value="custom4">
+          <div class="csss justify-center rounded-full">
+            <img
+              class="p-4 h-16 w-16 image"
+              alt="Silhouette of a person's head"
+              src="../../../assets/icon/bag.svg"
+            />
+          </div>
+        </ion-segment-button>
+
+        <!-- <ion-segment-button (click)="onButtonClick()" value="custom5">
+          <div class="csss justify-center rounded-full">
+            <img
+              class="p-4 h-16 w-16 image"
+              alt="Silhouette of a person's head"
+              src="../../../assets/icon/bag.svg"
+            />
+            <div *ngIf="segment-button-checked">
+              <h1>Title is checked!</h1>
+            </div>
+          </div>
+        </ion-segment-button> -->
+
+        <!-- <div class="active">input herer</div> -->
+
+        <!-- <button class="test">Add Element After Active</button> -->
+      </ion-segment>
+
+      <!-- <ion-segment
+        [(ngModel)]="selectedSegment"
+        (ionChange)="segmentChanged($event)"
+      >
+        <ion-segment-button
+          value="segment1"
+          [class.checked]="selectedSegment === 'segment1'"
+        >
+          Segment 1
         </ion-segment-button>
 
         <ion-segment-button
-          class=" rounded-full"
-          value="card"
+          value="segment2"
+          [class.checked]="selectedSegment === 'segment2'"
         >
-          <img
-            class="p-4 h-16 w-16"
-            alt="Silhouette of a person's head"
-            src="../../../assets/icon/danger.svg"
-          />
+          Segment 2
         </ion-segment-button>
-        <ion-segment-button
-          class=" rounded-full"
-          value="change"
-        >
-          <img
-            class="p-4 h-16 w-16"
-            alt="Silhouette of a person's head"
-            src="../../../assets/icon/bag.svg"
-          />
-        </ion-segment-button>
-        <ion-segment-button
-          class=" rounded-full"
-          value="part4"
-        >
-          <img
-            class="p-4 h-16 w-16"
-            alt="Silhouette of a person's head"
-            src="../../../assets/icon/danger.svg"
-          />
-        </ion-segment-button>
-      </ion-segment>
+      </ion-segment> -->
     </ion-card-header>
     <ion-card-content>
-      @switch (segment) { @case ("user") {
+      @switch (segment) { @case ("custom1") {
       <ion-card>
-        <ion-card-header> User Info </ion-card-header>
-        <ion-card-content> Your user info content here </ion-card-content>
+        <ion-card-header> custom 1 info </ion-card-header>
+        <ion-card-content> custom 1 info content </ion-card-content>
       </ion-card>
-      } @case ("card") {
+      } @case ("custom2") {
       <ion-card>
-        <ion-card-header> Card Info </ion-card-header>
-        <ion-card-content> Your card info content here </ion-card-content>
+        <ion-card-header> custom 2 Info </ion-card-header>
+        <ion-card-content> custom 2 content </ion-card-content>
       </ion-card>
-      } @case ("change") {
+      } @case ("custom3") {
       <ion-card>
-        <ion-card-header> Change Password </ion-card-header>
-        <ion-card-content> Your change password form here </ion-card-content>
+        <ion-card-header> custom 3 </ion-card-header>
+        <ion-card-content> custom 3 content </ion-card-content>
       </ion-card>
-      } @case ("part4") {
+      } @case ("custom4") {
       <ion-card>
-        <ion-card-header> Change Password </ion-card-header>
-        <ion-card-content> Your change password form here </ion-card-content>
+        <ion-card-header> custom 4 info </ion-card-header>
+        <ion-card-content> custom 3 content </ion-card-content>
       </ion-card>
       }}
     </ion-card-content>

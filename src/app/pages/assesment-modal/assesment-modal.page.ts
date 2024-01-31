@@ -87,5 +87,7 @@ export class AssesmentModalPage implements OnInit {
         values: this.assets.filter((i) => i.AssetType === newItem),
       })
     );
+
+    console.log(this.AssetTypesData);
   }
 }

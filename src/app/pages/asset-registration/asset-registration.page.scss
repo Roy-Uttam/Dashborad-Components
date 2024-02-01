@@ -6,16 +6,12 @@ ion-segment-button::part(indicator-background) {
   display: none;
 }
 
-// ion-segment-button {
-// --indicator-box-shadow: transparent !important;
-// --background: #d6eaeb;
-// --color: #2d2e87;
-// --background-checked: linear-gradient(to right, #2d2e87, #0083cb) !important;
-// --color-checked: white;
-// border-radius: 100px !important;
-// }
 
 ion-segment ion-segment-button.segment-button-checked {
+  .hidden-content {
+    display: inline;
+  }
+
   .csss {
     fill: #ffffff;
     display: flex;
@@ -28,10 +24,13 @@ ion-segment ion-segment-button.segment-button-checked {
 
   .image {
     filter: invert(100%) sepia(10%) saturate(0%) hue-rotate(91deg)
-      brightness(104%) contrast(104%);
+      brightness(104%) contrast(100%);
   }
 }
 .csss {
   background-color: #d6eaeb;
-  // border-radius: 100px;
+}
+
+.hidden-content {
+  display: none;
 }

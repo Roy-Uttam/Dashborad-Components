@@ -11,17 +11,18 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-card>
-    <ion-card-header style="height: 150px" class="border-b-2">
+  <ion-card class="card">
+    <ion-card-header class="border-b-2">
       <ion-segment
-        color="white"
-        class="border p-4 flex gap-4"
-        value="custom1"
-        [(ngModel)]="segment"
+        [scrollable]="true"
+        [value]="segment"
+        class="p-2 flex justify-start gap-2"
+        (ionChange)="handleChange($event)"
       >
         <ion-segment-button value="custom1">
           <div class="csss justify-center rounded-full">
             <img
+              style="fill: white"
               class="p-4 h-16 w-16 image"
               alt="Silhouette of a person's head"
               src="../../../assets/icon/sim.svg"
@@ -39,11 +40,7 @@
               alt="Silhouette of a person's head"
               src="../../../assets/icon/danger.svg"
             />
-            <ion-text
-              id="title2"
-              color="dark"
-              class="title ion-text-center hidden-content"
-            >
+            <ion-text color="dark" class="title ion-text-center hidden-content">
               <h1>custom2</h1>
             </ion-text>
           </div>
@@ -55,11 +52,7 @@
               alt="Silhouette of a person's head"
               src="../../../assets/icon/sim.svg"
             />
-            <ion-text
-              id="title2"
-              color="dark"
-              class="title ion-text-center hidden-content"
-            >
+            <ion-text color="dark" class="title ion-text-center hidden-content">
               <h1>custom3</h1>
             </ion-text>
           </div>
@@ -71,39 +64,189 @@
               alt="Silhouette of a person's head"
               src="../../../assets/icon/bag.svg"
             />
-            <ion-text
-              id="title2"
-              color="dark"
-              class="title ion-text-center hidden-content"
-            >
+            <ion-text color="dark" class="title ion-text-center hidden-content">
               <h1>custom4</h1>
             </ion-text>
           </div>
         </ion-segment-button>
+        <!-- <ion-segment-button class="" value="custom4">
+          <div id="target" class="csss justify-center rounded-full">
+            <img
+              class="p-4 h-16 w-16 image"
+              alt="Silhouette of a person's head"
+              src="../../../assets/icon/bag.svg"
+            />
+            <ion-text color="dark" class="title ion-text-center hidden-content">
+              <h1>custom4</h1>
+            </ion-text>
+          </div>
+        </ion-segment-button>
+        <ion-segment-button class="" value="custom4">
+          <div id="target" class="csss justify-center rounded-full">
+            <img
+              class="p-4 h-16 w-16 image"
+              alt="Silhouette of a person's head"
+              src="../../../assets/icon/bag.svg"
+            />
+            <ion-text color="dark" class="title ion-text-center hidden-content">
+              <h1>custom4</h1>
+            </ion-text>
+          </div>
+        </ion-segment-button>
+        <ion-segment-button class="" value="custom4">
+          <div id="target" class="csss justify-center rounded-full">
+            <img
+              class="p-4 h-16 w-16 image"
+              alt="Silhouette of a person's head"
+              src="../../../assets/icon/bag.svg"
+            />
+            <ion-text color="dark" class="title ion-text-center hidden-content">
+              <h1>custom4</h1>
+            </ion-text>
+          </div>
+        </ion-segment-button> -->
       </ion-segment>
     </ion-card-header>
-    <ion-card-content>
-      @switch (segment) { @case ("custom1") {
-      <ion-card>
-        <ion-card-header> custom 1 info </ion-card-header>
-        <ion-card-content> custom 1 info content </ion-card-content>
-      </ion-card>
-      } @case ("custom2") {
-      <ion-card>
-        <ion-card-header> custom 2 Info </ion-card-header>
-        <ion-card-content> custom 2 content </ion-card-content>
-      </ion-card>
-      } @case ("custom3") {
-      <ion-card>
-        <ion-card-header> custom 3 </ion-card-header>
-        <ion-card-content> custom 3 content </ion-card-content>
-      </ion-card>
-      } @case ("custom4") {
-      <ion-card>
-        <ion-card-header> custom 4 info </ion-card-header>
-        <ion-card-content> custom 3 content </ion-card-content>
-      </ion-card>
-      }}
-    </ion-card-content>
+
+    <!-- <ion-card-content> -->
+    @switch (segment) { @case ("custom1") {
+
+    <ion-grid class="m-5 mt-6">
+      <ion-row>
+        <ion-col size="6">
+          <ion-input
+            required
+            class="mb-4"
+            fill="outline"
+            label="Enter name"
+            placeholder="Roof-ACC-Cement House"
+            label-placement="floating"
+          ></ion-input>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-input
+            required
+            class="mb-4"
+            fill="outline"
+            label="Status"
+            placeholder="Roof-ACC-Cement House"
+            label-placement="floating"
+          ></ion-input>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-input
+            required
+            class="mb-4"
+            fill="outline"
+            label="Asset ID"
+            placeholder="12512"
+            label-placement="floating"
+          ></ion-input>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-input
+            required
+            class="mb-4"
+            fill="outline"
+            label="SAP ID"
+            placeholder="12512"
+            label-placement="floating"
+          ></ion-input>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-select
+            class="mb-4"
+            fill="outline"
+            label="Category"
+            [multiple]="true"
+            label-placement="floating"
+          >
+            <ion-select-option value="apple">Apple</ion-select-option>
+            <ion-select-option value="banana">Banana</ion-select-option>
+            <ion-select-option value="orange">Orange</ion-select-option>
+          </ion-select>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-input
+            required
+            class="mb-4"
+            fill="outline"
+            label="Cost Center"
+            placeholder="Ready mix"
+            label-placement="floating"
+          ></ion-input>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    } @case ("custom2") {
+    <ion-grid class="m-5 mt-6">
+      <ion-row>
+        <ion-col size="6">
+          <ion-input
+            required
+            class="mb-4"
+            fill="outline"
+            label="Enter name"
+            placeholder="Roof-ACC-Cement House"
+            label-placement="floating"
+          ></ion-input>
+        </ion-col>
+
+        <ion-col size="6">
+          <ion-input
+            required
+            class="mb-4"
+            fill="outline"
+            label="Status"
+            placeholder="Roof-ACC-Cement House"
+            label-placement="floating"
+          ></ion-input>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    } @case ("custom3") {
+    <ion-grid class="m-5 mt-6">
+      <ion-row>
+        <ion-col size="12">
+          <ion-select
+            class="mb-4"
+            fill="outline"
+            label="Stored Material"
+            [multiple]="true"
+            label-placement="floating"
+          >
+            <ion-select-option value="apple">Apple</ion-select-option>
+            <ion-select-option value="banana">Banana</ion-select-option>
+            <ion-select-option value="orange">Orange</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    } @case ("custom4") {
+    <ion-grid class="m-5 mt-6">
+      <ion-row>
+        <ion-col size="12">
+          <ion-select
+            class="mb-4"
+            fill="outline"
+            label="Stored Material"
+            [multiple]="true"
+            label-placement="floating"
+          >
+            <ion-select-option value="apple">Apple</ion-select-option>
+            <ion-select-option value="banana">Banana</ion-select-option>
+            <ion-select-option value="orange">Orange</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    }}
+    <!-- </ion-card-content> -->
   </ion-card>
 </ion-content>

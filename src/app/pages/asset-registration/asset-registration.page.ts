@@ -16,4 +16,8 @@ export class AssetRegistrationPage implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  handleChange(event: any) {
+    this.segment = event?.detail?.value;
+  }
 }
